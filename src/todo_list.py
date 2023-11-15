@@ -8,3 +8,6 @@ class TodoList:
     def add_task(self, description:str):
         self.tasks[self.counter] = Task(description)
         self.counter += 1
+
+    def set_done(self, id:int):
+        self.tasks[id].is_done = True
