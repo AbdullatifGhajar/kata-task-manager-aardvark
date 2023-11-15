@@ -8,4 +8,5 @@ class UserInterface:
         if self.todo_list.tasks == {}:
             print("No tasks yet!")
         else:
-            print("1 [ ] Do the dishes")
+            for id, task in self.todo_list.tasks.items():
+                print(f"{id} {'[x]' if task.is_done else '[ ]'} {task.description}")

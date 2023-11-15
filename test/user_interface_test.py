@@ -30,7 +30,7 @@ def test_print_todo_list_with_one_todo_item(capfd):
 def test_print_todo_list_with_one_done_item(capfd):
     user_interface = UserInterface()
     user_interface.todo_list.add_task("Do the dishes")
-    user_interface.set_done(1)
+    user_interface.todo_list.set_done(1)
 
     user_interface.print_todo_list()
     

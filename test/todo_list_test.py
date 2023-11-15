@@ -21,7 +21,7 @@ def test_add_task():
     todo_list.add_task(task_description)
     
     assert todo_list.tasks[1]
-    assert todo_list.tasks[1].name == task_description
+    assert todo_list.tasks[1].description == task_description
     
 def test_add_tasks():
     todo_list = TodoList()
@@ -33,8 +33,8 @@ def test_add_tasks():
     todo_list.add_task(task_description2)
     
     assert len(todo_list.tasks) == 2
-    assert todo_list.tasks[1].name == task_description1
-    assert todo_list.tasks[2].name == task_description2
+    assert todo_list.tasks[1].description == task_description1
+    assert todo_list.tasks[2].description == task_description2
     
 def test_set_done():
     todo_list = TodoList()
