@@ -50,6 +50,15 @@ def test_apply_input_to_delet_a_task():
   user_interface.apply_input("- 1")
     
   assert user_interface.todo_list.tasks == {}
+  
+  
+def test_apply_input_to_edit_a_todo_task():
+    user_interface = UserInterface()
+    user_interface.apply_input("+ New Task")
+        
+    user_interface.apply_input.is_done("o 1")
+        
+    assert user_interface.todo_list.tasks[1].is_done == True
     
 
     
