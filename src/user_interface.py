@@ -12,4 +12,15 @@ class UserInterface:
                 print(f"{id} {'[x]' if task.is_done else '[ ]'} {task.description}")
                 
     def apply_input(self, input: str):
-      self.todo_list.add_task(input[2:])
+        command, arguments = input.split(" ", 1)
+        match command:
+            case "+":
+                task_description = arguments
+                self.todo_list.add_task(task_description)
+            case "-":
+                task_id = int(arguments)
+                self.todo_list.remove_task(task_id)
+            
+        
+      
+      
