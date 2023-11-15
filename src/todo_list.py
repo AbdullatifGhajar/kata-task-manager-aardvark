@@ -14,3 +14,6 @@ class TodoList:
 
     def set_todo(self, id:int):
         self.tasks[id].is_done = False  
+
+    def remove_task(self, id:int):
+        del self.tasks[id]
