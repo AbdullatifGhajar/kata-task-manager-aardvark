@@ -6,7 +6,7 @@ VENV=$(VENV_NAME)/bin/
 setup: 				## Create environment and install base packages
 	@echo "Creating an virtual env"
 	@python3 -m venv $(VENV_NAME)
-	@(VENV)pip3 install pytest
+	@$(VENV)pip3 install pytest
 
 .PHONY: install-requirements
 install-requirements:		## Install and update requirements
