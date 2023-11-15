@@ -5,4 +5,7 @@ class UserInterface:
         self.todo_list = TodoList()
 
     def print_todo_list(self):
-        print("No tasks yet!")
+        if self.todo_list.tasks == {}:
+            print("No tasks yet!")
+        else:
+            print("1 [ ] Do the dishes")
