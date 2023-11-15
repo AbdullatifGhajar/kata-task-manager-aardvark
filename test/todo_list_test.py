@@ -54,3 +54,12 @@ def test_set_todo():
     todo_list.set_done(1)
     todo_list.set_todo(1)
     assert todo_list.tasks[1].is_done == False   
+
+def test_remove_task():
+    todo_list = TodoList()
+
+    task_description = "Do the dishes"
+    todo_list.add_task(task_description)
+
+    todo_list.remove_task(1)
+    assert todo_list.tasks == {}
