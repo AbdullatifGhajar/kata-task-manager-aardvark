@@ -21,4 +21,4 @@ def test_add_task():
     todo_list.add_task(task_description)
     
     assert todo_list.tasks[1]
-    assert todo_list.task[1].name == task_description
+    assert todo_list.tasks[1].name == task_description
