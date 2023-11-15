@@ -16,7 +16,7 @@ def test_print_empty_todo_list(capfd):
     user_interface.print_todo_list()
     
     out, err = capfd.readouterr()
-    assert out == "No tasks yet!"
+    assert out == "No tasks yet!\n"
 
 
     
