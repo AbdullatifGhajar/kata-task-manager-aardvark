@@ -38,11 +38,18 @@ def test_print_todo_list_with_one_done_item(capfd):
     assert out == "1 [x] Do the dishes\n"
     
 def test_apply_input_to_add_a_task():
-    user_interface = UserInterface()
-    user_input = "+ New Task"
-    user_interface.apply_input(user_input)
+    user_interface = UserInterface() 
+    user_interface.apply_input("+ New Task")
     
     assert user_interface.todo_list.tasks[1].description == "New Task"
+    
+def test_apply_input_to_delet_a_task():
+  user_interface = UserInterface()
+  user_interface.apply_input("+ New Task")
+  
+  user_interface.apply_input("- 1")
+    
+  assert user_interface.todo_list.tasks == {}
     
 
     
