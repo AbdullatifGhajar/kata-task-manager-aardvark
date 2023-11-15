@@ -37,5 +37,12 @@ def test_print_todo_list_with_one_done_item(capfd):
     out, err = capfd.readouterr()
     assert out == "1 [x] Do the dishes\n"
     
+def test_apply_input_to_add_a_task():
+    user_interface = UserInterface()
+    user_input = "+ New Task"
+    user_interface.apply_input(user_input)
+    
+    assert user_interface.todo_list.tasks[1].description == "New Task"
+    
 
     
