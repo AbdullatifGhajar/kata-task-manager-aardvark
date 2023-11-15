@@ -7,3 +7,8 @@ def test_init():
     todo_list = TodoList()
     
     assert todo_list
+    
+def test_has_tasks_as_dict():
+    todo_list = TodoList()
+    
+    assert todo_list.tasks == {}
