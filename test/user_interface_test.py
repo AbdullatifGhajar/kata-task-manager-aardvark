@@ -9,4 +9,14 @@ def test_init():
     user_interface = UserInterface()
 
     assert type(user_interface.todo_list) == TodoList
+
+def test_print_empty_todo_list(capfd):
+    user_interface = UserInterface()
+
+    user_interface.print_todo_list()
+    
+    out, err = capfd.readouterr()
+    assert out == "No tasks yet!"
+
+
     
