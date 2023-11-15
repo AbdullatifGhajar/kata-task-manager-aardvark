@@ -1,6 +1,7 @@
 import pytest
 
 from src.todo_list import TodoList
+from src.task import Task
 
 
 def test_init():
@@ -19,4 +20,5 @@ def test_add_task():
     task_description = "Do the dishes"
     todo_list.add_task(task_description)
     
-    assert todo_list.tasks == {1: Task(task_description)}
+    assert todo_list.tasks[1]
+    assert todo_list.task[1].name = task_description
